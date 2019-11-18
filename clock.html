@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<body>
+  <canvas id="Mycanvas" width = "400" height = "400" style = "background-color:#d3d3d3"></canvas>
+
+  <script>
+    var canvas = document.getElementById("Mycanvas");
+    var ctx = canvas.getContext("2d");
+    var num;
+    var x=50;
+    var y=250;
+    for(num = 0;num<11;num++)
+    {
+
+      ctx.beginPath();
+      ctx.arc(x, y, 11, 0, 2*Math.PI);
+      if(num%2==0){
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.stroke();
+      }
+      else{
+        ctx.fillStyle = 'green';
+        ctx.fill();
+        ctx.stroke();
+      }
+     if (num<4){
+      x+=20;
+      y-=30;
+     }
+    else if (num>5) {
+      x+=20;
+      y+=30;
+
+    }
+    else{
+      x+=30;
+     }
+    }
+    
+    </script>
+
+  </body>
+</html>
